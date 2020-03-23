@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/tareas', 'TaskController@index');
+
+Route::put('/tareas/actualizar', 'TaskController@update');
+
+Route::post('/tareas/guardar', 'TaskController@store');
+
+Route::delete('/tareas/borrar/{id}', 'TaskController@destroy');
+
+Route::get('/tareas/buscar', 'TaskController@show');
