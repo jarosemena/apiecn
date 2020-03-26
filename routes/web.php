@@ -26,3 +26,5 @@ Route::post('/tareas/guardar', 'TaskController@store');
 Route::delete('/tareas/borrar/{id}', 'TaskController@destroy');
 
 Route::get('/tareas/buscar', 'TaskController@show');
+
+Route::get('/personas', 'PersonsController@index');
