@@ -15,8 +15,8 @@ class CreateCasasretirosTable extends Migration
     {
         Schema::create('casasretiros', function (Blueprint $table) {
             $table->id($column='casa_retiro_id');
-            $table->string('nombre');
-            $table->string('mapa');
+            $table->string('nombre',100);
+            $table->string('mapa',250);
             $table->timestamps();
         });
     }

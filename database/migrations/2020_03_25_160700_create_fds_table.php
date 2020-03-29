@@ -18,9 +18,11 @@ class CreateFdsTable extends Migration
             $table->datetime('fechaini');
             $table->date('fechafin');
             $table->integer('numero');
-            $table->string('prefijo_cert');
+            $table->string('prefijo_cert',20);
             $table->bigInteger('casa_retiro_id');
             $table->bigInteger('parroquia_id');
+            $table->integer('status');
+            $table->string('statusdesc',50);
             $table->timestamps();
         });
     }

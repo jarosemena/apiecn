@@ -14,7 +14,8 @@ class FdsController extends Controller
      */
     public function index()
     {
-        //
+        $task = fds::all();
+        return $task;
     }
 
     /**

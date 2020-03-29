@@ -23,7 +23,7 @@ class CreateSolicitudesTable extends Migration
             $table->date('fecha_boda');
             $table->integer('tiempo_novios');
             $table->smallInteger('como_se_entero');
-            $table->string('como_se_entero_detalle');
+            $table->string('como_se_entero_detalle',150);
             $table->timestamps();
         });
     }

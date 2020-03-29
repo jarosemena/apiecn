@@ -14,7 +14,8 @@ class PersonasController extends Controller
      */
     public function index()
     {
-        //
+        $task = personas::all();
+        return $task;
     }
 
     /**

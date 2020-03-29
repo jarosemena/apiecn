@@ -15,8 +15,8 @@ class CreateParroquiasTable extends Migration
     {
         Schema::create('parroquias', function (Blueprint $table) {
             $table->id($column='parroquia_id');
-            $table->string('nombre');
-            $table->string('mapa');
+            $table->string('nombre',100);
+            $table->string('mapa',250);
             $table->timestamps();
         });
     }

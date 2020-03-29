@@ -14,7 +14,8 @@ class SolicitudesController extends Controller
      */
     public function index()
     {
-        //
+        $solicitud = solicitudes::all();
+        return $solicitud;
     }
 
     /**
@@ -35,7 +36,19 @@ class SolicitudesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $solicitud = new solicitudes();
+        $solicitud->novio                   = $request->novio ;
+        $solicitud->novia                   = $request->novia;
+        $solicitud->fds_solicitado          = $request->fds_solicitado;
+        $solicitud->fds_asistido            = $request->fds_asistido;
+        $solicitud->noche_id                = $request->noche_id;
+        $solicitud->fecha_boda              = $request->fecha_boda;
+        $solicitud->tiempo_novios           = $request->tiempo_novios;
+        $solicitud->como_se_entero          = $request->como_se_entero;
+        $solicitud->como_se_entero_detalle  = $request->como_se_entero_detalle ;     
+      
+
+        $solicitud->save();
     }
 
     /**
@@ -46,7 +59,8 @@ class SolicitudesController extends Controller
      */
     public function show(solicitudes $solicitudes)
     {
-        //
+        $solicitud = solicitudes::findOrFail($request->id);
+        return $solicitud;
     }
 
     /**
@@ -69,7 +83,22 @@ class SolicitudesController extends Controller
      */
     public function update(Request $request, solicitudes $solicitudes)
     {
-        //
+        $task = Task::findOrFail($request->id);
+        $solicitud->novio                   = $request->novio ;
+        $solicitud->novia                   = $request->novia;
+        $solicitud->fds_solicitado          = $request->fds_solicitado;
+        $solicitud->fds_asistido            = $request->fds_asistido;
+        $solicitud->noche_id                = $request->noche_id;
+        $solicitud->fecha_boda              = $request->fecha_boda;
+        $solicitud->tiempo_novios           = $request->tiempo_novios;
+        $solicitud->como_se_entero          = $request->como_se_entero;
+        $solicitud->como_se_entero_detalle  = $request->como_se_entero_detalle ;     
+      
+
+        $solicitud->save();
+
+        return $solicitud;
+
     }
 
     /**
@@ -80,6 +109,7 @@ class SolicitudesController extends Controller
      */
     public function destroy(solicitudes $solicitudes)
     {
-        //
+        $solicitud = solicitud::destroy($request->id);
+        return $solicitud;
     }
 }

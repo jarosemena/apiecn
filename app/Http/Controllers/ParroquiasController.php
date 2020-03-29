@@ -14,7 +14,8 @@ class ParroquiasController extends Controller
      */
     public function index()
     {
-        //
+        $task = parroquias::all();
+        return $task;
     }
 
     /**

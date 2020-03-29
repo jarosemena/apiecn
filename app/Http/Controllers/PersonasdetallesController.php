@@ -14,7 +14,8 @@ class PersonasdetallesController extends Controller
      */
     public function index()
     {
-        //
+        $task = personasdetalles::all();
+        return $task;
     }
 
     /**

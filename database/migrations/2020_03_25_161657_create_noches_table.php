@@ -16,8 +16,8 @@ class CreateNochesTable extends Migration
         Schema::create('noches', function (Blueprint $table) {
             $table->id($column='noche_id');         
             $table->date('fecha');
-            $table->string('lugar');
-            $table->string('fds_habilitados');
+            $table->string('lugar',100);
+            $table->string('fds_habilitados',150);
             $table->timestamps();
         });
     }

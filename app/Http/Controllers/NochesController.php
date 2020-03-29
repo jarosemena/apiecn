@@ -14,7 +14,8 @@ class NochesController extends Controller
      */
     public function index()
     {
-        //
+        $task = noches::all();
+        return $task;
     }
 
     /**
